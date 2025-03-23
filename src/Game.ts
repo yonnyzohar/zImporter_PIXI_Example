@@ -1,7 +1,6 @@
 import * as PIXI from 'pixi.js';
-import { ZScene } from "zImporter_PIXI/ZScene";
-import { ZSceneStack } from "zImporter_PIXI/ZSceneStack";
-import { ZTimeline } from "zImporter_PIXI/ZTimeline";
+import { ZContainer, ZScene, ZSceneStack, ZTimeline } from "zImporter_PIXI";
+
 //https://gamesupply.itch.io/fruits-and-vegetables
 export class Game{
     
@@ -24,9 +23,17 @@ export class Game{
                 posX+=100;
             });
 
-            
-            
+            let scene1:ZScene = new ZScene();
+            scene1.load("./assets/yonny/",()=>{
+                ZSceneStack.push(scene1);
+                let c:ZContainer = ZSceneStack.spawn("TextItemTemplate") as ZContainer;
+                stage.addChild(c);
+                c.x = this.stage.width/2;
+                c.y = this.stage.height/2;
+            }); 
         });
+
+          
     }
 
     update(deltaMS: number) {

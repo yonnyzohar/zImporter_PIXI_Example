@@ -1,12 +1,4 @@
 /*!
- * @pixi/constants - v6.5.10
- * Compiled Thu, 06 Jul 2023 15:25:11 UTC
- *
- * @pixi/constants is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-
-/*!
  * @pixi/core - v6.5.10
  * Compiled Thu, 06 Jul 2023 15:25:11 UTC
  *
@@ -23,30 +15,6 @@
  */
 
 /*!
- * @pixi/loaders - v6.5.10
- * Compiled Thu, 06 Jul 2023 15:25:11 UTC
- *
- * @pixi/loaders is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-
-/*!
- * @pixi/math - v6.5.10
- * Compiled Thu, 06 Jul 2023 15:25:11 UTC
- *
- * @pixi/math is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-
-/*!
- * @pixi/runner - v6.5.10
- * Compiled Thu, 06 Jul 2023 15:25:11 UTC
- *
- * @pixi/runner is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-
-/*!
  * @pixi/settings - v6.5.10
  * Compiled Thu, 06 Jul 2023 15:25:11 UTC
  *
@@ -59,14 +27,6 @@
  * Compiled Thu, 06 Jul 2023 15:25:11 UTC
  *
  * @pixi/ticker is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-
-/*!
- * @pixi/utils - v6.5.10
- * Compiled Thu, 06 Jul 2023 15:25:11 UTC
- *
- * @pixi/utils is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
  */
 

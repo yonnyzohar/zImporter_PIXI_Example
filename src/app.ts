@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import { ZUpdatables } from "zImporter_PIXI/ZUpdatables";
+import { ZUpdatables } from "zImporter_PIXI";
 import { Game } from "./Game";
 
 //npx webpack

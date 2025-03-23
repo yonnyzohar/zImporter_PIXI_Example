@@ -1,0 +1,64 @@
+{
+  "animTracks": {},
+  "stage": {
+    "children": [
+      {
+        "type": "asset",
+        "name": "TextItemTemplate",
+        "template": true,
+        "instanceName": "instance_gpln",
+        "pivotX": 0,
+        "pivotY": 0,
+        "x": 465.0579413769596,
+        "y": 165.78050443081116,
+        "alpha": 1,
+        "a": 1,
+        "b": 0,
+        "c": 0,
+        "d": 1,
+        "tx": 465.0579413769596,
+        "ty": 165.78050443081116,
+        "filters": {}
+      }
+    ]
+  },
+  "templates": {
+    "TextItemTemplate": {
+      "type": "asset",
+      "name": "TextItemTemplate",
+      "template": true,
+      "children": [
+        {
+          "text": "New Textfield",
+          "type": "textField",
+          "name": "tf",
+          "template": true,
+          "x": -54.49011588275391,
+          "y": -14.735173824130925,
+          "rotation": 0,
+          "width": 282.2,
+          "height": 25.2,
+          "alpha": 1,
+          "size": 16,
+          "color": "#00fa11",
+          "align": "left",
+          "fontName": "Arial",
+          "z": 1,
+          "stroke": "#000000",
+          "strokeThickness": 0,
+          "wordWrap": false,
+          "wordWrapWidth": 100,
+          "breakWords": false,
+          "leading": 5.45,
+          "letterSpacing": 15,
+          "padding": 0.9,
+          "filters": {},
+          "uniqueFontName": "Arial_00fa11_16"
+        }
+      ]
+    }
+  },
+  "fonts": [
+    "Arial_00fa11_16"
+  ]
+}

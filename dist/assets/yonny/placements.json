@@ -6,18 +6,18 @@
         "type": "asset",
         "name": "TextItemTemplate",
         "template": true,
-        "instanceName": "instance_gpln",
+        "instanceName": "instance_rgs1",
         "pivotX": 0,
         "pivotY": 0,
-        "x": 465.0579413769596,
-        "y": 165.78050443081116,
+        "x": 319.3456032719836,
+        "y": 164.03544648943418,
         "alpha": 1,
         "a": 1,
         "b": 0,
         "c": 0,
         "d": 1,
-        "tx": 465.0579413769596,
-        "ty": 165.78050443081116,
+        "tx": 319.3456032719836,
+        "ty": 164.03544648943418,
         "filters": {}
       }
     ]
@@ -31,16 +31,16 @@
         {
           "text": "New Textfield",
           "type": "textField",
-          "name": "tf",
+          "name": "instance_h3nd",
           "template": true,
-          "x": -54.49011588275391,
-          "y": -14.735173824130925,
+          "x": -51,
+          "y": -9.5,
           "rotation": 0,
-          "width": 282.2,
-          "height": 25.2,
+          "width": 102,
+          "height": 19,
           "alpha": 1,
           "size": 16,
-          "color": "#00fa11",
+          "color": "#ffffff",
           "align": "left",
           "fontName": "Arial",
           "z": 1,
@@ -49,16 +49,26 @@
           "wordWrap": false,
           "wordWrapWidth": 100,
           "breakWords": false,
-          "leading": 5.45,
-          "letterSpacing": 15,
-          "padding": 0.9,
-          "filters": {},
-          "uniqueFontName": "Arial_00fa11_16"
+          "leading": 0,
+          "letterSpacing": 0,
+          "padding": 0,
+          "filters": {
+            "dropShadow": {
+              "type": "dropShadow",
+              "color": 0,
+              "alpha": 0.5,
+              "blur": 5,
+              "distance": 10,
+              "rotation": 45,
+              "resolution": 2
+            }
+          },
+          "uniqueFontName": "Arial_ffffff_16"
         }
       ]
     }
   },
   "fonts": [
-    "Arial_00fa11_16"
+    "Arial_ffffff_16"
   ]
 }

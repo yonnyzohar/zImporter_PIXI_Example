@@ -1,4 +1,12 @@
 /*!
+ * @pixi/constants - v6.5.10
+ * Compiled Thu, 06 Jul 2023 15:25:11 UTC
+ *
+ * @pixi/constants is licensed under the MIT License.
+ * http://www.opensource.org/licenses/mit-license
+ */
+
+/*!
  * @pixi/core - v6.5.10
  * Compiled Thu, 06 Jul 2023 15:25:11 UTC
  *
@@ -11,6 +19,14 @@
  * Compiled Thu, 06 Jul 2023 15:25:11 UTC
  *
  * @pixi/extensions is licensed under the MIT License.
+ * http://www.opensource.org/licenses/mit-license
+ */
+
+/*!
+ * @pixi/filter-drop-shadow - v5.2.0
+ * Compiled Tue, 28 Feb 2023 14:24:35 UTC
+ *
+ * @pixi/filter-drop-shadow is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
  */
 

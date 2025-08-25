@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zImporter Example</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Style the button to stay on top */
+        button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 10;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.2.4/dist/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/yonnyzohar/zImporter_PIXI@main/dist/zimporter-pixi.min.js"></script>
+</head>
+
+<body>
+    <script>
+        const app = new PIXI.Application({
+
+            backgroundColor: 0x000000,
+            resolution: window.devicePixelRatio || 1, // Handle high-DPI screens
+            autoDensity: true, // Improve sharpness on high-DPI screens
+            antialias: true // Smooth rendering
+        });
+
+
+        window.addEventListener("resize", () => {
+            resizeCanvas();
+        });
+
+        function resizeCanvas() {
+            if (app) {
+                app.renderer.resize(window.innerWidth, window.innerHeight);
+                zimporter.ZSceneStack.resize(window.innerWidth, window.innerHeight);
+            }
+        }
+
+
+
+        (globalThis).__PIXI_APP__ = app;
+
+       // var game = new Game(app.stage, resizeCanvas);
+
+
+        // Append the app's view to the DOM
+        document.body.appendChild(app.view);
+        zimporter.ZUpdatables.init(24);
+
+        const fpsText = new PIXI.Text('FPS: 0', { fontSize: 24, fill: 'white' });
+        fpsText.position.set(10, 10);
+        app.stage.addChild(fpsText);
+
+        // Update FPS every frame
+        let lastTime = performance.now();
+        let frameCount = 0;
+
+        app.ticker.add(
+            () => {
+
+                frameCount++;
+                const now = performance.now();
+                const delta = now - lastTime;
+
+                if (delta >= 1000) { // Update every second
+                    const fps = (frameCount / delta) * 1000;
+                    fpsText.text = `FPS: ${fps.toFixed(1)}`;
+                    frameCount = 0;
+                    lastTime = now;
+                    fpsText.parent?.addChild(fpsText); // Ensure the FPS text is always on top
+                }
+
+                const ticker = PIXI.Ticker.shared;
+                var deltaMS = ticker.deltaMS / 1000;
+                //update(deltaMS);
+                zimporter.ZUpdatables.update();
+            }
+        );
+
+
+        let stage = app.stage;
+        let loadPath = (window).loadPath || "./assets/robo/";
+        console.log("Game constructor " + loadPath);
+        let scene = new zimporter.ZScene("testScene");
+        scene.load(loadPath, () => {
+            zimporter.ZSceneStack.push(scene);
+            scene.loadStage(stage);
+            let sceneStage = scene.sceneStage;
+            for (const child of sceneStage.children) {
+                if(child instanceof zimporter.ZTimeline){
+                    child.play();
+                }
+                
+            }
+
+            resizeCanvas();
+
+
+        });
+
+
+
+    </script>
+
+    <!-- This is a comment 
+    <button onclick="toggleFullscreen()">Go Fullscreen</button>
+
+    <script>
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.error(`Error attempting fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+    -->
+</body>
+
+</html>

@@ -23,6 +23,7 @@ window.addEventListener("resize", () => {
 const params = new URLSearchParams(window.location.search);
 const path = params.get('path');
 (window as any).loadPath = path;
+console.log("Load path set to:", path);
 
 (globalThis as any).__PIXI_APP__ = app;
 

@@ -6,7 +6,7 @@ export class Game {
     stage: PIXI.Container;
     constructor(stage: PIXI.Container, forceRenderFnc: Function | null = null) {
         this.stage = stage;
-        const arr = ["autoPlay", "complexButton", "jackpots", "mySlotMachine", "scroll", "test", "zStudioTest"];
+        const arr = ["zStudioTest"];
         let loadPath = (window as any).loadPath || "./assets/" + arr[0] + "/";
         console.log("Game constructor " + loadPath);
         let scene: ZScene = new ZScene("testScene");
